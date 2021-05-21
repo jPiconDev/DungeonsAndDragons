@@ -1,14 +1,22 @@
 package dd.core;
 
+import java.util.ArrayList;
+
 public class Caballero extends Personaje{
-    
-    public Caballero(String nombre) {
+    // Constructor
+    public Caballero(String nombre){
         super(nombre);
+        numAtq = 2;
         this.salud = 1500;
     }
 
     @Override
-    public void ataca(Personaje enemigo) {
-        for(int i=0; i<2; i++) this.ataca(enemigo);        
+    public ArrayList<Integer> ataca(Personaje enemigo) {
+        ArrayList<Integer> ataques = new ArrayList<>();
+        for(int i=0; i<numAtq; i++) {
+            if(enemigo.getSalud() > 0)
+                ataques.add(this.ataque.lanzaAtaque(enemigo));
+        }
+        return ataques;
     }
 }

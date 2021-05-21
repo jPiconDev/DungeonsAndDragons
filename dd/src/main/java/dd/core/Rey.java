@@ -1,14 +1,22 @@
 package dd.core;
 
-public class Rey extends Personaje{
+import java.util.ArrayList;
 
+public class Rey extends Personaje{
+    // Constructor
     public Rey(String nombre){
         super(nombre);
+        numAtq = 3;
         this.salud = 2000;
     }
 
     @Override
-    public void ataca(Personaje enemigo) {
-        for(int i=0; i<3; i++) this.ataca(enemigo);    
+    public ArrayList<Integer> ataca(Personaje enemigo) {
+        ArrayList<Integer> ataques = new ArrayList<>();
+        for(int i=0; i<numAtq; i++) {
+            if(enemigo.getSalud() > 0)
+                ataques.add(this.ataque.lanzaAtaque(enemigo));
+        }
+        return ataques;
     }
 }

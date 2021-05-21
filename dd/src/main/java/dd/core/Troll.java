@@ -1,14 +1,19 @@
 package dd.core;
 
-public class Troll extends Personaje{
-    
-    public Troll(String nombre) {
-        super(nombre);
-        this.salud = 1000;
-    }
+import java.util.ArrayList;
 
-    @Override
-    public void ataca(Personaje enemigo) {
-        this.ataca(enemigo);
-    }
+public class Troll extends Personaje{
+   // Constructor
+   public Troll(String nombre){
+    super(nombre);
+    this.salud = 1000;
+}
+
+@Override
+public ArrayList<Integer> ataca(Personaje enemigo) {
+    ArrayList<Integer> ataques = new ArrayList<>();
+    if(enemigo.getSalud() > 0)
+        ataques.add(this.ataque.lanzaAtaque(enemigo));
+    return ataques;
+}
 }
