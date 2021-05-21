@@ -83,6 +83,6 @@ public abstract class Personaje {
         if(this instanceof Rey) tipo = "KING";
         if(this instanceof Caballero) tipo = "KNIGHT";
         if(this instanceof Troll) tipo = "TROLL";
-        return "[ " + tipo + ":" + this.nombre + ":" + this.salud + " ]";
+        return "[ " + tipo + " " + this.nombre + ": " + this.salud + " ]";
     }
 }

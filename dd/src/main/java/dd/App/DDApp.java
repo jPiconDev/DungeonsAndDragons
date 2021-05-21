@@ -3,14 +3,7 @@ package dd.App;
 import java.util.ArrayList;
 import java.util.Random;
 
-import dd.core.Ataque;
-import dd.core.AtaqueArco;
-import dd.core.AtaqueCuchillo;
-import dd.core.AtaqueEspada;
-import dd.core.Caballero;
-import dd.core.Personaje;
-import dd.core.Rey;
-import dd.core.Troll;
+import dd.core.*;
 
 /**
  * Clase que simula el enfrentamiento entre un 
@@ -64,16 +57,22 @@ public class DDApp
         }
 
         //Iniciamos los turnos de la partida:
+        System.out.println(INTRO);
+
         while(hombres.size() != 0 || trolls.size() != 0) {
-            System.out.println(INTRO);
             
             for (Personaje hombre : hombres) {
                 Personaje troll = trolls.get(rand.nextInt(trolls.size()));
                 System.out.println(hombre.toString() + " lucha contra " + troll.toString());
-                hombre.ataca(troll);
+                ArrayList<Integer> listaSalud = hombre.ataca(troll);
+                for (int i = 0; i < listaSalud.size(); i++) {
+                    System.out.println("Ataque con " + hombre.getArma() + "(" + listaSalud.get(i) + ")");
+                }
+                if(troll.getSalud() == 0) trolls.remove(troll);
             }
             for (Personaje troll : trolls) {
                 troll.ataca(hombres.get(rand.nextInt(hombres.size())));
+                return; //evita bucle infinito
             }
         }
     }
