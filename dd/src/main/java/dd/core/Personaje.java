@@ -77,12 +77,17 @@ public abstract class Personaje {
      */
     public abstract ArrayList<Integer> ataca(Personaje enemigo);
 
+    // @Override
+    // public String toString() {
+    //     String tipo = "";
+    //     if(this instanceof Rey) tipo = "KING";
+    //     if(this instanceof Caballero) tipo = "KNIGHT";
+    //     if(this instanceof Troll) tipo = "TROLL";
+    //     return "[" + tipo + " " + this.nombre + ": " + this.salud + "]";
+    // }
+    
     @Override
     public String toString() {
-        String tipo = "";
-        if(this instanceof Rey) tipo = "KING";
-        if(this instanceof Caballero) tipo = "KNIGHT";
-        if(this instanceof Troll) tipo = "TROLL";
-        return "[" + tipo + " " + this.nombre + ": " + this.salud + "]";
+        return "[" + this.nombre + ": " + this.salud + "]";
     }
 }
