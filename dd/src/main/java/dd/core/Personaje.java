@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * <li> {@link #toString()}
  */
 public abstract class Personaje {
-    private String nombre;
+    protected String nombre;
     protected int salud;
     protected Ataque ataque;
     protected int numAtq;
@@ -58,8 +58,8 @@ public abstract class Personaje {
      * @return salud del personaje
      */
     public int updateSalud(int value) {
-        salud = value;
-        return salud;
+        salud -= value;
+        return value;
     }
 
     /**
@@ -83,6 +83,6 @@ public abstract class Personaje {
         if(this instanceof Rey) tipo = "KING";
         if(this instanceof Caballero) tipo = "KNIGHT";
         if(this instanceof Troll) tipo = "TROLL";
-        return "[ " + tipo + " " + this.nombre + ": " + this.salud + " ]";
+        return "[" + tipo + " " + this.nombre + ": " + this.salud + "]";
     }
 }

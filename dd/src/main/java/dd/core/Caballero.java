@@ -19,4 +19,9 @@ public class Caballero extends Personaje{
         }
         return ataques;
     }
+
+    // @Override
+    // public String toString(){
+    //     return "[" + super.nombre + ": " + salud + "]";
+    // }
 }

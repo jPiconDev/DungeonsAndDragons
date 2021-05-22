@@ -3,6 +3,7 @@ package dd.core;
 import java.util.Random;
 
 public class AtaqueArco implements Ataque{
+    //private long seed = 12345678L;
     private Random rand = new Random();
     private final int ataque = 50;
 
