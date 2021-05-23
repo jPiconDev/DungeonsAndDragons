@@ -1,7 +1,11 @@
 package dd.core;
 
 import java.util.Random;
-
+/**
+ * Implementa un tipo de ataque con cuchillo
+ * 
+ * @method {@link #lanzaAtaque} <li>{@link #getArma}
+ */
 public class AtaqueCuchillo implements Ataque{
     //private long seed = 12345678L;
     private Random rand = new Random();

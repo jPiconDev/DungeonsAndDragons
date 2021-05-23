@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"dd.core","l":"Ataque"},{"p":"dd.core","l":"AtaqueCuchillo"},{"p":"dd.core","l":"AtaqueEspada"},{"p":"dd.core","l":"Caballero"},{"p":"dd.App","l":"DDApp"},{"p":"dd.core","l":"Personaje"},{"p":"dd.core","l":"Rey"},{"p":"dd.core","l":"Troll"}]
