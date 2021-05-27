@@ -34,7 +34,10 @@ public abstract class Personaje {
      */
     public void setAtaque(Ataque ataque){
         this.ataque = ataque;
-        this.arma = ataque.getArma();
+    }
+
+    public Ataque getAtaque() {
+        return this.ataque;
     }
     
     /**

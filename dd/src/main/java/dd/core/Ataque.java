@@ -22,10 +22,4 @@ public interface Ataque{
      * @return int Valor entero del resultado del ataque
      */
     public int lanzaAtaque(Personaje enemigo);
-
-    /**
-     * Método que devuelve el tipo de arma usada por el personaje
-     * @return String El tipo de arma
-     */
-    public String getArma();
 }
