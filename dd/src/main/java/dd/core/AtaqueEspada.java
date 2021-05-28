@@ -1,12 +1,14 @@
 package dd.core;
 
+import java.util.Random;
+
 /**
  * Implementa un tipo de ataque con espada
  * 
  * @method {@link #lanzaAtaque} <li>{@link #getArma}
  */
 public class AtaqueEspada implements Ataque{
-    private NumRand r =  new NumRand();
+    private Random r = NumRand.getRand();
     private final int ataque = 100;
 
     @Override

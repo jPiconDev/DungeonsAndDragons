@@ -5,16 +5,11 @@ import java.util.Random;
 /**
  * Clase que genera un mismo Random para toda la aplicación
  */
-public class NumRand extends Random{
-    private long seed;
-    private Random rand;
+public class NumRand {
+    private static long seed = 12345678L;   
+    private static Random rand = new Random(seed); //Para usar sin semilla eliminar el parámetro
     
-    public NumRand(){
-        this.seed = 12345678L;
-        this.rand = new Random(seed); //Para usar sin semilla eliminar el parámetro
-    }
-
-    public Random getRand(){
-        return this.rand;
+    public static Random getRand(){
+        return rand;
     }
 }
